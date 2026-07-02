@@ -58,9 +58,8 @@
   }
 
   .stage { max-width: 1360px; margin: 0 auto; padding: clamp(20px,4vw,40px) clamp(16px,4vw,40px) 120px; }
-  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+  .compare { display: grid; grid-template-columns: 1fr; max-width: 1180px; margin: 0 auto; gap: 22px; align-items: start; }
   .col { min-width: 0; animation: fade .35s ease; }
-  @media (max-width: 980px) { .compare { grid-template-columns: 1fr; } }
   @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
   /* intro */
@@ -73,6 +72,10 @@
   .intro .meta-row span:first-child { color: var(--shell-mute); }
   .intro .meta-row span:last-child { color: #d3d7e0; font-weight: 600; text-align: right; }
 
+  .principles { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 22px; }
+  .principles .chip-p { display: flex; align-items: center; gap: 8px; background: var(--card-bg); color: var(--ink); border: 1px solid var(--shell-line); border-radius: 12px; padding: 10px 14px; font-size: 12.5px; line-height: 1.4; max-width: 320px; }
+  .principles .chip-p b { color: var(--ink); }
+  .principles .chip-p .sub { color: var(--shell-mute); }
   .frame { border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 30px 80px rgba(0,0,0,.4); }
 
   /* themed root */
@@ -83,7 +86,7 @@
   /* header */
   .ah { display: flex; align-items: center; gap: 14px; padding: 15px clamp(16px,3vw,26px); border-bottom: var(--hdr-border); background: var(--hdr-bg); backdrop-filter: blur(10px); }
   .ah .logo { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: var(--display-ls); color: var(--ink); }
-  .ah .logo .mark { width: 26px; height: 26px; border-radius: var(--mark-radius); background: var(--accent-grad); display: grid; place-items: center; font-size: 13px; color: var(--on-accent); font-weight: 800; box-shadow: var(--glow-sm); }
+  .ah .logo .mark { width: 26px; height: 26px; border-radius: var(--mark-radius); background: var(--brand-grad); display: grid; place-items: center; font-size: 13px; color: #0a2013; font-weight: 800; box-shadow: var(--glow-sm); }
   .ah nav { display: flex; gap: 3px; margin-left: 6px; flex-wrap: wrap; }
   .ah nav a { padding: 8px 12px; border-radius: var(--pill-radius); font-size: 13px; font-weight: 600; color: var(--mute); transition: all .16s; cursor: pointer; }
   .ah nav a:hover { color: var(--ink); background: var(--hover-bg); }
@@ -92,15 +95,18 @@
   .ah .netbtn { display: flex; align-items: center; gap: 7px; padding: 8px 12px; border-radius: var(--pill-radius); font-size: 12.5px; font-weight: 600; color: var(--ink); background: var(--chip-bg); border: var(--chip-border); }
   .ah .netbtn .g { width: 7px; height: 7px; border-radius: 50%; background: #35d07f; box-shadow: 0 0 8px #35d07f; }
   .addr { font-family: var(--font-mono); font-size: 12.5px; }
+  .btn-wallet { background: var(--brand-grad); color: #0a2013; }
+  .btn-reward { background: var(--brand-grad); color: #0a2013; border: none; }
 
   .body { padding: clamp(18px,3vw,30px); }
   .pagehead { margin-bottom: 22px; }
   .pagehead .eye { font-family: var(--font-mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 8px; display: inline-flex; align-items: center; gap: 8px; }
-  .pagehead .eye::before { content: ''; width: 20px; height: 1px; background: var(--accent-ink); display: inline-block; }
+  .pagehead .eye::before { content: ''; width: 20px; height: 3px; border-radius: 2px; background: var(--brand-grad); display: inline-block; }
   .pagehead h1 { font-family: var(--font-display); font-size: clamp(28px,4.4vw,46px); font-weight: var(--display-weight); font-style: var(--display-style); letter-spacing: var(--display-ls); line-height: 1; color: var(--ink); }
   .pagehead p { color: var(--mute); margin-top: 10px; font-size: 14px; max-width: 520px; }
 
-  .bento { display: grid; grid-template-columns: 1fr; gap: var(--gap); align-items: start; }
+  .bento { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--gap); align-items: start; }
+  @media (max-width: 900px) { .bento { grid-template-columns: 1fr; } }
 
   .card { background: var(--card-bg); border: var(--card-border); border-radius: var(--card-radius); box-shadow: var(--card-shadow); backdrop-filter: var(--card-blur); padding: var(--card-pad); }
   .card-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 12px; }
@@ -242,7 +248,7 @@
     --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(255,255,255,.07);
     --hover-bg:rgba(57,181,74,.1); --nav-on-ink:#ffffff; --nav-on-bg:#00A651; --nav-on-shadow:0 4px 12px rgba(0,166,81,.35);
     --chip-bg:rgba(255,255,255,.05); --chip-border:1px solid rgba(255,255,255,.1);
-    --accent-grad:#00A651; --glow-sm:0 4px 14px rgba(0,166,81,.4); --mark-radius:8px;
+    --accent-grad:#00A651; --brand-grad:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --glow-sm:0 4px 14px rgba(0,166,81,.4); --mark-radius:8px;
     --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
     --card-bg:rgba(255,255,255,.04); --card-border:1px solid rgba(255,255,255,.08); --card-radius:14px; --card-shadow:0 8px 30px rgba(0,15,6,.35); --card-blur:blur(12px); --card-pad:20px;
     --io-bg:rgba(255,255,255,.03); --io-border:1px solid rgba(255,255,255,.08); --io-radius:12px; --preview-bg:rgba(0,166,81,.05);
@@ -263,7 +269,7 @@
     --hdr-bg:rgba(255,255,255,.7); --hdr-border:1px solid #dcebd6;
     --hover-bg:rgba(0,166,81,.07); --nav-on-ink:#ffffff; --nav-on-bg:#00A651; --nav-on-shadow:0 4px 12px rgba(0,166,81,.3);
     --chip-bg:#ffffff; --chip-border:1px solid #dcebd6;
-    --accent-grad:#00A651; --glow-sm:0 4px 12px rgba(0,166,81,.3); --mark-radius:8px;
+    --accent-grad:#00A651; --brand-grad:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --glow-sm:0 4px 12px rgba(0,166,81,.3); --mark-radius:8px;
     --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
     --card-bg:#ffffff; --card-border:1px solid #e2eddb; --card-radius:14px; --card-shadow:0 8px 24px rgba(20,110,60,.07); --card-blur:none; --card-pad:20px;
     --io-bg:#f3f8f0; --io-border:1px solid #e2eddb; --io-radius:12px; --preview-bg:rgba(0,166,81,.05);
@@ -331,7 +337,7 @@
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brand"><b>EPOL</b><span>Design Directions</span></div>
-      <span style="margin-left:4px;font-size:12.5px;color:var(--shell-mute);font-weight:600;letter-spacing:.01em">재단 그라데이션 시안 · 수평 비교</span>
+      <span style="margin-left:4px;font-size:12.5px;color:var(--shell-mute);font-weight:600;letter-spacing:.01em">EPOL 최종 디자인 · 하이브리드</span>
       <div class="theme-toggle" id="themeToggle">
         <button data-th="dark" class="on">🌙 Dark</button>
         <button data-th="light">☀ Light</button>
@@ -341,22 +347,16 @@
 
 <div class="stage" id="stage"></div>
 <div style="max-width:1360px;margin:0 auto;padding:6px clamp(16px,4vw,40px) 0">
-  <div class="hint">💡 <b>수평 비교:</b> 왼쪽 <b>01 Foundation</b>(플랫 솔리드) vs 오른쪽 <b>02 Verdant</b>(그린→골드 그라데이션) — 상단 <b>Dark/Light 토글</b>은 두 시안에 동시 적용. 각 시안에서 버튼 hover·클릭, 세그먼트, MEV 스위치, 슬리피지, 스왑 화살표, 입력 포커스, MAX, 툴팁, "스왑하기"(로딩→토스트)를 직접 눌러 비교하세요.</div>
+  <div class="hint">💡 <b>EPOL — Final (Hybrid):</b> 딥그린 #00A651 솔리드를 기본 시스템으로, 그린→라임→골드 그라데이션은 <b>로고 마크·헤더 "지갑 연결" 버튼·파밍 카드 "리워드 수령" 버튼·히어로 eyebrow 액센트 바</b> 4곳에만 시그니처 모먼트로 사용합니다. 골드(#F2D200)는 리워드·APR 강조. 상단 <b>Dark/Light 토글</b>로 테마 전환. 버튼 hover·클릭, 세그먼트, MEV 스위치, 슬리피지, 스왑 화살표, 입력 포커스, MAX, 툴팁, "스왑하기"(로딩→토스트)를 직접 눌러 확인하세요.</div>
 </div>
 
 <script>
 const DIRS = {
   foundation: {
-    kicker: "DIRECTION 01 · 재단 팔레트 기준 · 플랫 솔리드 브랜드",
-    name: "Foundation",
-    desc: "재단에서 제공한 컬러(#00A651 · #39B54A · #8CC63F · #C8D400 · #F2D200)를 그라데이션 없이 '있는 그대로' 플랫 솔리드로 쓰는 가장 정직한 브랜드 방향. 딥 그린(#00A651)을 주요 CTA·네비·스위치에, 골드(#F2D200)를 세컨더리·리워드 강조에, 라임/옐로우그린을 보조로. 깔끔하고 신뢰감 있는 공식 브랜드 톤. 다크는 그린 뉴트럴 블랙, 라이트는 클린 화이트그린.",
-    meta: [["강점","재단 브랜드 정합"],["팔레트","#00A651·#F2D200 (솔리드)"],["Dark","그린 뉴트럴 블랙"],["Light","클린 화이트+그린"]],
-  },
-  verdant: {
-    kicker: "DIRECTION 02 · 브랜드 팔레트 · 그린→골드 그라데이션",
-    name: "Verdant",
-    desc: "제시한 브랜드 컬러(진한그린 #00A651 → 라임 #8CC63F → 골드 #F2D200)를 히어로 그라데이션으로 전면에 쓰는 비비드·모던 방향. 성장/수확/일드 느낌의 에너제틱한 그린-골드. CTA·스왑화살표·아이콘·스위치에 브랜드 그라데이션, 글로우 포커스. 다크는 딥 그린블랙, 라이트는 프레시 화이트그린. (노랑 끝단 가독성 위해 버튼 텍스트는 다크)",
-    meta: [["강점","브랜드 정합·에너지"],["팔레트","#00A651·#8CC63F·#F2D200"],["Dark","딥 그린블랙+그라데이션"],["Light","프레시 화이트+그라데이션"]],
+    kicker: "FINAL · 재단 팔레트 하이브리드 (솔리드 기반 + 그라데이션 시그니처)",
+    name: "EPOL — Final",
+    desc: "딥그린(#00A651) 솔리드를 기본 시스템으로 삼아 일반 primary CTA·스왑화살표·활성 네비·스위치·포커스·링크에 쓰고, 골드(#F2D200)는 리워드·APR 강조에 예약한다. 그린→라임→골드 그라데이션(linear-gradient(120deg,#00A651,#8CC63F,#F2D200))은 로고 마크·헤더 '지갑 연결' 버튼·파밍 카드 '리워드 수령' 버튼·히어로 eyebrow 액센트 바, 오직 4곳의 '시그니처 모먼트'에만 예약해 브랜드 에너지와 신뢰감 있는 솔리드 시스템을 함께 잡은 최종 하이브리드 방향.",
+    meta: [["시스템","솔리드 그린 기반"],["시그니처","그라데이션 4곳 한정"],["Dark","그린 뉴트럴 블랙"],["Light","클린 화이트+그린"]],
   },
 };
 
@@ -391,11 +391,16 @@ function panelHTML(dir){
         <nav><a class="on">스왑</a><a>풀</a><a>파밍</a><a>볼트</a><a>게임</a><a>포트폴리오</a></nav>
         <div class="wallet">
           <div class="netbtn"><span class="g"></span> Polygon</div>
-          <button class="btn btn-primary" style="padding:9px 15px;border-radius:var(--pill-radius);font-size:13px"><span class="addr">0x7a…3f4</span></button>
+          <button class="btn btn-wallet" style="padding:9px 15px;border-radius:var(--pill-radius);font-size:13px">지갑 연결</button>
         </div>
       </div>
 
       <div class="body">
+        <div class="principles">
+          <div class="chip-p">🟩 <span><b>그라데이션</b> = 시그니처 모먼트 <span class="sub">(로고 · 지갑 연결 · 리워드 수령)</span></span></div>
+          <div class="chip-p">🟢 <span><b>솔리드 그린 #00A651</b> <span class="sub">= 일반 CTA · 상태</span></span></div>
+          <div class="chip-p">🟡 <span><b>골드 #F2D200</b> <span class="sub">= 리워드 · APR 강조</span></span></div>
+        </div>
         <div class="pagehead">
           <span class="eye">Trade</span>
           <h1>스왑</h1>
@@ -471,7 +476,7 @@ function panelHTML(dir){
                 <div class="kv"><span class="k">내 스테이킹</span><span class="v">$2,140.00</span></div>
                 <div class="kv"><span class="k">받을 리워드</span><span class="v" style="color:var(--accent-ink)">48.20 EPOL</span></div>
               </div>
-              <div class="btnrow"><button class="btn btn-secondary">스테이킹</button><button class="btn btn-ghost">수확</button></div>
+              <div class="btnrow"><button class="btn btn-secondary">스테이킹</button><button class="btn btn-reward">리워드 수령</button></div>
             </div>
           </div>
         </div>
