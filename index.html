@@ -58,8 +58,9 @@
   }
 
   .stage { max-width: 1360px; margin: 0 auto; padding: clamp(20px,4vw,40px) clamp(16px,4vw,40px) 120px; }
-  .panel { display: none; animation: fade .35s ease; }
-  .panel.active { display: block; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+  .col { min-width: 0; animation: fade .35s ease; }
+  @media (max-width: 980px) { .compare { grid-template-columns: 1fr; } }
   @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
   /* intro */
@@ -99,8 +100,7 @@
   .pagehead h1 { font-family: var(--font-display); font-size: clamp(28px,4.4vw,46px); font-weight: var(--display-weight); font-style: var(--display-style); letter-spacing: var(--display-ls); line-height: 1; color: var(--ink); }
   .pagehead p { color: var(--mute); margin-top: 10px; font-size: 14px; max-width: 520px; }
 
-  .bento { display: grid; grid-template-columns: 1.12fr 1fr; gap: var(--gap); align-items: start; }
-  @media (max-width: 900px) { .bento { grid-template-columns: 1fr; } }
+  .bento { display: grid; grid-template-columns: 1fr; gap: var(--gap); align-items: start; }
 
   .card { background: var(--card-bg); border: var(--card-border); border-radius: var(--card-radius); box-shadow: var(--card-shadow); backdrop-filter: var(--card-blur); padding: var(--card-pad); }
   .card-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 12px; }
@@ -324,51 +324,6 @@
     --tooltip-bg:#10241a; --tooltip-ink:#ffffff; --divider:#e0edd6;
   }
 
-  /* ============================================================
-     DIRECTION 7 — HARVEST (brand palette · gold-forward premium)
-     ============================================================ */
-  .app[data-dir="harvest"][data-theme="dark"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#12130a; --ink:#f3f1df; --mute:#9a9877; --accent-ink:#e0cf2f; --accent-soft:rgba(242,210,0,.15); --on-accent:#14140a;
-    --bg-fx:radial-gradient(60% 50% at 15% 0%,rgba(242,210,0,.14),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(57,181,74,.11),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(200,212,0,.14);
-    --hover-bg:rgba(200,212,0,.08); --nav-on-ink:#f3f1df; --nav-on-bg:rgba(200,212,0,.12); --nav-on-shadow:none;
-    --chip-bg:rgba(255,255,255,.04); --chip-border:1px solid rgba(200,212,0,.16);
-    --accent-grad:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --glow-sm:0 0 16px rgba(242,210,0,.45); --mark-radius:8px;
-    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
-    --card-bg:rgba(255,255,255,.04); --card-border:1px solid rgba(200,212,0,.15); --card-radius:16px; --card-shadow:0 12px 40px rgba(20,20,4,.5); --card-blur:blur(14px); --card-pad:22px;
-    --io-bg:rgba(200,212,0,.05); --io-border:1px solid rgba(200,212,0,.14); --io-radius:12px; --preview-bg:rgba(242,210,0,.06);
-    --tok-bg:rgba(200,212,0,.08); --tok-border:1px solid rgba(200,212,0,.2); --tok-radius:999px; --tok-ink:#f3f1df;
-    --arrow-bg:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --arrow-border:3px solid #12130a; --arrow-ink:#14140a; --arrow-radius:12px; --arrow-shadow:0 0 20px rgba(242,210,0,.45);
-    --focus-ring:0 0 0 3px rgba(242,210,0,.22);
-    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 26px rgba(242,210,0,.28); --btn-primary-hover-shadow:0 10px 34px rgba(242,210,0,.42);
-    --sec-bg:rgba(57,181,74,.14); --sec-ink:#6fce6f; --sec-border:1px solid rgba(57,181,74,.4); --sec-shadow:none; --ghost-border:1px solid rgba(200,212,0,.18);
-    --danger-bg:rgba(244,63,94,.12); --danger-ink:#fb7185; --danger-border:1px solid rgba(244,63,94,.35);
-    --seg-bg:rgba(255,255,255,.04); --seg-on-bg:rgba(200,212,0,.16); --seg-on-ink:#f3f1df; --seg-on-shadow:none;
-    --switch-off:rgba(255,255,255,.14); --switch-on:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F);
-    --tooltip-bg:#20200f; --tooltip-ink:#f3f1df; --divider:rgba(200,212,0,.13);
-  }
-  .app[data-dir="harvest"][data-theme="light"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#faf6e6; --ink:#1c2410; --mute:#7a7a56; --accent-ink:#8a6d0a; --accent-soft:rgba(242,210,0,.16); --on-accent:#1c2410;
-    --bg-fx:radial-gradient(60% 45% at 12% 0%,rgba(242,210,0,.14),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(57,181,74,.1),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.66); --hdr-border:1px solid #ece3c0;
-    --hover-bg:rgba(138,109,10,.08); --nav-on-ink:#1c2410; --nav-on-bg:#ffffff; --nav-on-shadow:0 2px 8px rgba(0,0,0,.06);
-    --chip-bg:#fffdf0; --chip-border:1px solid #ece3c0;
-    --accent-grad:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --glow-sm:0 4px 14px rgba(200,180,0,.32); --mark-radius:8px;
-    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
-    --card-bg:#fffdf0; --card-border:1px solid #ece3c0; --card-radius:16px; --card-shadow:0 10px 30px rgba(120,100,20,.08); --card-blur:none; --card-pad:22px;
-    --io-bg:#f8f3df; --io-border:1px solid #ece3c0; --io-radius:12px; --preview-bg:rgba(242,210,0,.09);
-    --tok-bg:#ffffff; --tok-border:1px solid #e6dcb8; --tok-radius:999px; --tok-ink:#1c2410;
-    --arrow-bg:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --arrow-border:3px solid #faf6e6; --arrow-ink:#1c2410; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(200,180,0,.35);
-    --focus-ring:0 0 0 3px rgba(200,180,0,.2);
-    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(200,180,0,.3); --btn-primary-hover-shadow:0 10px 28px rgba(200,180,0,.42);
-    --sec-bg:rgba(57,181,74,.13); --sec-ink:#1c7a3c; --sec-border:1px solid rgba(57,181,74,.35); --sec-shadow:none; --ghost-border:1px solid #e6dcb8;
-    --danger-bg:rgba(190,24,60,.08); --danger-ink:#be123c; --danger-border:1px solid rgba(190,24,60,.3);
-    --seg-bg:#f1ecd6; --seg-on-bg:#ffffff; --seg-on-ink:#1c2410; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
-    --switch-off:#ddd3a8; --switch-on:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F);
-    --tooltip-bg:#1c2410; --tooltip-ink:#ffffff; --divider:#ece3c0;
-  }
 </style>
 </head>
 <body>
@@ -376,16 +331,7 @@
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brand"><b>EPOL</b><span>Design Directions</span></div>
-      <div class="dir-tabs" id="tabs">
-        <button class="dir-tab active" data-t="foundation"><span class="dot" style="background:#00A651"></span><span class="num">01</span>Foundation</button>
-        <button class="dir-tab" data-t="verdant"><span class="dot" style="background:linear-gradient(120deg,#00A651,#8CC63F,#F2D200)"></span><span class="num">02</span>Verdant</button>
-        <button class="dir-tab" data-t="harvest"><span class="dot" style="background:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F)"></span><span class="num">03</span>Harvest</button>
-      </div>
-      <select class="dir-select" id="dirSelect" aria-label="시안 선택">
-        <option value="foundation">01 · Foundation (재단 기준)</option>
-        <option value="verdant">02 · Verdant (그린→골드)</option>
-        <option value="harvest">03 · Harvest (골드 강조)</option>
-      </select>
+      <span style="margin-left:4px;font-size:12.5px;color:var(--shell-mute);font-weight:600;letter-spacing:.01em">재단 그라데이션 시안 · 수평 비교</span>
       <div class="theme-toggle" id="themeToggle">
         <button data-th="dark" class="on">🌙 Dark</button>
         <button data-th="light">☀ Light</button>
@@ -394,6 +340,9 @@
 </div>
 
 <div class="stage" id="stage"></div>
+<div style="max-width:1360px;margin:0 auto;padding:6px clamp(16px,4vw,40px) 0">
+  <div class="hint">💡 <b>수평 비교:</b> 왼쪽 <b>01 Foundation</b>(플랫 솔리드) vs 오른쪽 <b>02 Verdant</b>(그린→골드 그라데이션) — 상단 <b>Dark/Light 토글</b>은 두 시안에 동시 적용. 각 시안에서 버튼 hover·클릭, 세그먼트, MEV 스위치, 슬리피지, 스왑 화살표, 입력 포커스, MAX, 툴팁, "스왑하기"(로딩→토스트)를 직접 눌러 비교하세요.</div>
+</div>
 
 <script>
 const DIRS = {
@@ -408,12 +357,6 @@ const DIRS = {
     name: "Verdant",
     desc: "제시한 브랜드 컬러(진한그린 #00A651 → 라임 #8CC63F → 골드 #F2D200)를 히어로 그라데이션으로 전면에 쓰는 비비드·모던 방향. 성장/수확/일드 느낌의 에너제틱한 그린-골드. CTA·스왑화살표·아이콘·스위치에 브랜드 그라데이션, 글로우 포커스. 다크는 딥 그린블랙, 라이트는 프레시 화이트그린. (노랑 끝단 가독성 위해 버튼 텍스트는 다크)",
     meta: [["강점","브랜드 정합·에너지"],["팔레트","#00A651·#8CC63F·#F2D200"],["Dark","딥 그린블랙+그라데이션"],["Light","프레시 화이트+그라데이션"]],
-  },
-  harvest: {
-    kicker: "DIRECTION 03 · 브랜드 팔레트 · 골드 강조 프리미엄",
-    name: "Harvest",
-    desc: "같은 팔레트에서 골드(#F2D200·#C8D400)를 주역으로, 그린(#39B54A)을 보조·텍스트로 쓰는 프리미엄·내추럴 방향. 세리프(Fraunces) 디스플레이 + 웜 뉴트럴 서피스로 '수확·일드 트레저리' 감성을 성숙하게. 다크는 딥 올리브블랙+골드, 라이트는 웜 아이보리+골드. Verdant보다 차분하고 고급스러운 톤.",
-    meta: [["강점","프리미엄·수확감"],["팔레트","#F2D200·#C8D400·#39B54A"],["Dark","올리브블랙+골드"],["Light","웜 아이보리+골드"]],
   },
 };
 
@@ -565,8 +508,6 @@ function panelHTML(dir){
       <div class="toast js-toast"><span class="ck">✔</span> 트랜잭션 완료 · 861.42 USDT 수령</div>
     </div>
   </div>
-
-  <div class="hint">💡 <b>확인:</b> 상단 <b>Dark / Light 토글</b>로 테마 전환 · <b>버튼 hover·클릭(눌림), 세그먼트(스왑/지정가/브릿지), MEV 스위치, 슬리피지 pill, 스왑 화살표(회전), 입력창 포커스(글로우), MAX, 툴팁, "스왑하기"(로딩→성공 토스트)</b> 를 직접 눌러보세요.</div>
   `;
 }
 
@@ -583,30 +524,20 @@ function renderPalette(app){
 const stage = document.getElementById('stage');
 const panels = {};
 let curTheme = 'dark';
-Object.keys(DIRS).forEach((dir,i)=>{
-  const el = document.createElement('div');
-  el.className = 'panel' + (i===0?' active':'');
-  el.dataset.panel = dir;
-  el.innerHTML = panelHTML(dir);
-  stage.appendChild(el);
-  panels[dir] = el;
+const compare = document.createElement('div');
+compare.className = 'compare';
+stage.appendChild(compare);
+Object.keys(DIRS).forEach(dir=>{
+  const col = document.createElement('div');
+  col.className = 'col';
+  col.dataset.panel = dir;
+  col.innerHTML = panelHTML(dir);
+  compare.appendChild(col);
+  panels[dir] = col;
 });
 // initial palettes
 requestAnimationFrame(()=>Object.values(panels).forEach(p=>renderPalette(p.querySelector('.app'))));
 
-// direction switching (desktop tabs + mobile select)
-function selectDir(dir){
-  document.querySelectorAll('.dir-tab').forEach(t=>t.classList.toggle('active', t.dataset.t===dir));
-  Object.values(panels).forEach(p=>p.classList.remove('active'));
-  panels[dir].classList.add('active');
-  const sel = document.getElementById('dirSelect'); if(sel && sel.value!==dir) sel.value = dir;
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-document.getElementById('tabs').addEventListener('click', e=>{
-  const b = e.target.closest('.dir-tab'); if(!b) return;
-  selectDir(b.dataset.t);
-});
-document.getElementById('dirSelect').addEventListener('change', e=>selectDir(e.target.value));
 
 // theme toggle (global) — manual button
 function setTheme(th){
@@ -650,8 +581,6 @@ stage.addEventListener('click', e=>{
     }, 1300);
   }
 });
-// default: show brand-palette direction first
-selectDir('foundation');
 </script>
 </body>
 </html>
