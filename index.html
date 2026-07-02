@@ -463,6 +463,98 @@
   }
   .app[data-dir="cyber"] .card { clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px)); }
   .app[data-dir="cyber"] .stat .v, .app[data-dir="cyber"] .aprbadge .n, .app[data-dir="cyber"] .pcard .big { text-shadow: 0 0 12px var(--accent-soft); }
+
+  /* ============================================================
+     DIRECTION 6 — VERDANT (brand palette · green→gold gradient)
+     ============================================================ */
+  .app[data-dir="verdant"][data-theme="dark"] {
+    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
+    --bg:#0a1410; --ink:#eaf3ec; --mute:#7d9384; --accent-ink:#4ec95d; --accent-soft:rgba(57,181,74,.16); --on-accent:#06180e;
+    --bg-fx:radial-gradient(60% 50% at 12% 0%,rgba(0,166,81,.18),transparent 60%),radial-gradient(50% 45% at 100% 8%,rgba(140,198,63,.13),transparent 60%),radial-gradient(55% 55% at 88% 100%,rgba(242,210,0,.12),transparent 60%);
+    --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(140,198,63,.12);
+    --hover-bg:rgba(140,198,63,.08); --nav-on-ink:#eaf3ec; --nav-on-bg:rgba(140,198,63,.12); --nav-on-shadow:none;
+    --chip-bg:rgba(255,255,255,.05); --chip-border:1px solid rgba(140,198,63,.16);
+    --accent-grad:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --glow-sm:0 0 16px rgba(57,181,74,.5); --mark-radius:9px;
+    --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
+    --card-bg:rgba(255,255,255,.045); --card-border:1px solid rgba(140,198,63,.14); --card-radius:18px; --card-shadow:0 10px 40px rgba(0,20,10,.4); --card-blur:blur(16px); --card-pad:20px;
+    --io-bg:rgba(255,255,255,.03); --io-border:1px solid rgba(140,198,63,.12); --io-radius:14px; --preview-bg:rgba(0,166,81,.06);
+    --tok-bg:rgba(255,255,255,.06); --tok-border:1px solid rgba(140,198,63,.16); --tok-radius:999px; --tok-ink:#eaf3ec;
+    --arrow-bg:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --arrow-border:3px solid #0a1410; --arrow-ink:#06180e; --arrow-radius:12px; --arrow-shadow:0 0 20px rgba(57,181,74,.45);
+    --focus-ring:0 0 0 3px rgba(57,181,74,.22);
+    --btn-radius:12px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 26px rgba(57,181,74,.3); --btn-primary-hover-shadow:0 10px 34px rgba(140,198,63,.42);
+    --sec-bg:rgba(140,198,63,.14); --sec-ink:#b5e06a; --sec-border:1px solid rgba(140,198,63,.4); --sec-shadow:none; --ghost-border:1px solid rgba(140,198,63,.18);
+    --danger-bg:rgba(246,70,93,.12); --danger-ink:#ff8095; --danger-border:1px solid rgba(246,70,93,.35);
+    --seg-bg:rgba(255,255,255,.04); --seg-on-bg:rgba(140,198,63,.16); --seg-on-ink:#eaf3ec; --seg-on-shadow:none;
+    --switch-off:rgba(255,255,255,.14); --switch-on:linear-gradient(120deg,#00A651,#8CC63F,#F2D200);
+    --tooltip-bg:#12211a; --tooltip-ink:#eaf3ec; --divider:rgba(140,198,63,.13);
+  }
+  .app[data-dir="verdant"][data-theme="light"] {
+    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
+    --bg:#f2f8ee; --ink:#10241a; --mute:#5f7a68; --accent-ink:#0b8f46; --accent-soft:rgba(0,166,81,.1); --on-accent:#0a2013;
+    --bg-fx:radial-gradient(60% 50% at 12% 0%,rgba(0,166,81,.1),transparent 60%),radial-gradient(50% 45% at 100% 8%,rgba(140,198,63,.1),transparent 60%),radial-gradient(55% 55% at 88% 100%,rgba(242,210,0,.09),transparent 60%);
+    --hdr-bg:rgba(255,255,255,.68); --hdr-border:1px solid #dcebd2;
+    --hover-bg:rgba(0,166,81,.07); --nav-on-ink:#10241a; --nav-on-bg:#ffffff; --nav-on-shadow:0 2px 8px rgba(0,0,0,.06);
+    --chip-bg:#ffffff; --chip-border:1px solid #dcebd2;
+    --accent-grad:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --glow-sm:0 4px 14px rgba(0,166,81,.32); --mark-radius:9px;
+    --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
+    --card-bg:#ffffff; --card-border:1px solid #e0edd6; --card-radius:18px; --card-shadow:0 10px 30px rgba(20,110,60,.08); --card-blur:none; --card-pad:20px;
+    --io-bg:#f4faef; --io-border:1px solid #e0edd6; --io-radius:14px; --preview-bg:rgba(0,166,81,.05);
+    --tok-bg:#ffffff; --tok-border:1px solid #d3e6c4; --tok-radius:999px; --tok-ink:#10241a;
+    --arrow-bg:linear-gradient(120deg,#00A651,#8CC63F,#F2D200); --arrow-border:3px solid #f2f8ee; --arrow-ink:#0a2013; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(0,166,81,.3);
+    --focus-ring:0 0 0 3px rgba(0,166,81,.16);
+    --btn-radius:12px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(0,166,81,.26); --btn-primary-hover-shadow:0 10px 28px rgba(140,198,63,.4);
+    --sec-bg:rgba(0,166,81,.1); --sec-ink:#0b7a3c; --sec-border:1px solid rgba(0,166,81,.3); --sec-shadow:none; --ghost-border:1px solid #d3e6c4;
+    --danger-bg:rgba(185,28,28,.08); --danger-ink:#b91c1c; --danger-border:1px solid rgba(185,28,28,.3);
+    --seg-bg:#eaf3e4; --seg-on-bg:#ffffff; --seg-on-ink:#10241a; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
+    --switch-off:#caddbb; --switch-on:linear-gradient(120deg,#00A651,#8CC63F,#F2D200);
+    --tooltip-bg:#10241a; --tooltip-ink:#ffffff; --divider:#e0edd6;
+  }
+
+  /* ============================================================
+     DIRECTION 7 — HARVEST (brand palette · gold-forward premium)
+     ============================================================ */
+  .app[data-dir="harvest"][data-theme="dark"] {
+    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
+    --bg:#12130a; --ink:#f3f1df; --mute:#9a9877; --accent-ink:#e0cf2f; --accent-soft:rgba(242,210,0,.15); --on-accent:#14140a;
+    --bg-fx:radial-gradient(60% 50% at 15% 0%,rgba(242,210,0,.14),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(57,181,74,.11),transparent 60%);
+    --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(200,212,0,.14);
+    --hover-bg:rgba(200,212,0,.08); --nav-on-ink:#f3f1df; --nav-on-bg:rgba(200,212,0,.12); --nav-on-shadow:none;
+    --chip-bg:rgba(255,255,255,.04); --chip-border:1px solid rgba(200,212,0,.16);
+    --accent-grad:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --glow-sm:0 0 16px rgba(242,210,0,.45); --mark-radius:8px;
+    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
+    --card-bg:rgba(255,255,255,.04); --card-border:1px solid rgba(200,212,0,.15); --card-radius:16px; --card-shadow:0 12px 40px rgba(20,20,4,.5); --card-blur:blur(14px); --card-pad:22px;
+    --io-bg:rgba(200,212,0,.05); --io-border:1px solid rgba(200,212,0,.14); --io-radius:12px; --preview-bg:rgba(242,210,0,.06);
+    --tok-bg:rgba(200,212,0,.08); --tok-border:1px solid rgba(200,212,0,.2); --tok-radius:999px; --tok-ink:#f3f1df;
+    --arrow-bg:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --arrow-border:3px solid #12130a; --arrow-ink:#14140a; --arrow-radius:12px; --arrow-shadow:0 0 20px rgba(242,210,0,.45);
+    --focus-ring:0 0 0 3px rgba(242,210,0,.22);
+    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 26px rgba(242,210,0,.28); --btn-primary-hover-shadow:0 10px 34px rgba(242,210,0,.42);
+    --sec-bg:rgba(57,181,74,.14); --sec-ink:#6fce6f; --sec-border:1px solid rgba(57,181,74,.4); --sec-shadow:none; --ghost-border:1px solid rgba(200,212,0,.18);
+    --danger-bg:rgba(244,63,94,.12); --danger-ink:#fb7185; --danger-border:1px solid rgba(244,63,94,.35);
+    --seg-bg:rgba(255,255,255,.04); --seg-on-bg:rgba(200,212,0,.16); --seg-on-ink:#f3f1df; --seg-on-shadow:none;
+    --switch-off:rgba(255,255,255,.14); --switch-on:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F);
+    --tooltip-bg:#20200f; --tooltip-ink:#f3f1df; --divider:rgba(200,212,0,.13);
+  }
+  .app[data-dir="harvest"][data-theme="light"] {
+    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
+    --bg:#faf6e6; --ink:#1c2410; --mute:#7a7a56; --accent-ink:#8a6d0a; --accent-soft:rgba(242,210,0,.16); --on-accent:#1c2410;
+    --bg-fx:radial-gradient(60% 45% at 12% 0%,rgba(242,210,0,.14),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(57,181,74,.1),transparent 60%);
+    --hdr-bg:rgba(255,255,255,.66); --hdr-border:1px solid #ece3c0;
+    --hover-bg:rgba(138,109,10,.08); --nav-on-ink:#1c2410; --nav-on-bg:#ffffff; --nav-on-shadow:0 2px 8px rgba(0,0,0,.06);
+    --chip-bg:#fffdf0; --chip-border:1px solid #ece3c0;
+    --accent-grad:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --glow-sm:0 4px 14px rgba(200,180,0,.32); --mark-radius:8px;
+    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
+    --card-bg:#fffdf0; --card-border:1px solid #ece3c0; --card-radius:16px; --card-shadow:0 10px 30px rgba(120,100,20,.08); --card-blur:none; --card-pad:22px;
+    --io-bg:#f8f3df; --io-border:1px solid #ece3c0; --io-radius:12px; --preview-bg:rgba(242,210,0,.09);
+    --tok-bg:#ffffff; --tok-border:1px solid #e6dcb8; --tok-radius:999px; --tok-ink:#1c2410;
+    --arrow-bg:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F); --arrow-border:3px solid #faf6e6; --arrow-ink:#1c2410; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(200,180,0,.35);
+    --focus-ring:0 0 0 3px rgba(200,180,0,.2);
+    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(200,180,0,.3); --btn-primary-hover-shadow:0 10px 28px rgba(200,180,0,.42);
+    --sec-bg:rgba(57,181,74,.13); --sec-ink:#1c7a3c; --sec-border:1px solid rgba(57,181,74,.35); --sec-shadow:none; --ghost-border:1px solid #e6dcb8;
+    --danger-bg:rgba(190,24,60,.08); --danger-ink:#be123c; --danger-border:1px solid rgba(190,24,60,.3);
+    --seg-bg:#f1ecd6; --seg-on-bg:#ffffff; --seg-on-ink:#1c2410; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
+    --switch-off:#ddd3a8; --switch-on:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F);
+    --tooltip-bg:#1c2410; --tooltip-ink:#ffffff; --divider:#ece3c0;
+  }
 </style>
 </head>
 <body>
@@ -476,6 +568,8 @@
         <button class="dir-tab" data-t="mono"><span class="dot" style="background:#6d8bff"></span><span class="num">03</span>Mono Grid</button>
         <button class="dir-tab" data-t="amethyst"><span class="dot" style="background:linear-gradient(120deg,#a78bfa,#c084fc)"></span><span class="num">04</span>Royal Amethyst</button>
         <button class="dir-tab" data-t="cyber"><span class="dot" style="background:linear-gradient(120deg,#22e1ff,#ff3dbe)"></span><span class="num">05</span>Cyber HUD</button>
+        <button class="dir-tab" data-t="verdant"><span class="dot" style="background:linear-gradient(120deg,#00A651,#8CC63F,#F2D200)"></span><span class="num">06</span>Verdant</button>
+        <button class="dir-tab" data-t="harvest"><span class="dot" style="background:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F)"></span><span class="num">07</span>Harvest</button>
       </div>
       <select class="dir-select" id="dirSelect" aria-label="시안 선택">
         <option value="aurora">01 · Aurora Mint</option>
@@ -483,6 +577,8 @@
         <option value="mono">03 · Mono Grid</option>
         <option value="amethyst">04 · Royal Amethyst</option>
         <option value="cyber">05 · Cyber HUD</option>
+        <option value="verdant">06 · Verdant (그린→골드)</option>
+        <option value="harvest">07 · Harvest (골드 강조)</option>
       </select>
       <div class="theme-toggle" id="themeToggle">
         <button data-th="dark" class="on">🌙 Dark</button>
@@ -524,6 +620,18 @@ const DIRS = {
     name: "Cyber HUD",
     desc: "그리드 배경 + 홀로그래픽 액센트 + HUD 클립코너 패널 + 글로우 수치. 모노스페이스 데이터로 프로 트레이더 '콕핏' 감성. 다크는 딥스페이스 네온, 라이트는 아이스 블루프린트(엔지니어링 화이트) — 라이트에서도 클립코너·그리드·시안 액센트로 테크 감성을 유지. 데이터 밀도 높은 화면에 강함.",
     meta: [["강점","테크·데이터감"],["레퍼런스","Hyperliquid·SF HUD"],["Dark","딥스페이스 네온"],["Light","아이스 블루프린트"]],
+  },
+  verdant: {
+    kicker: "DIRECTION 06 · 브랜드 팔레트 · 그린→골드 그라데이션",
+    name: "Verdant",
+    desc: "제시한 브랜드 컬러(진한그린 #00A651 → 라임 #8CC63F → 골드 #F2D200)를 히어로 그라데이션으로 전면에 쓰는 비비드·모던 방향. 성장/수확/일드 느낌의 에너제틱한 그린-골드. CTA·스왑화살표·아이콘·스위치에 브랜드 그라데이션, 글로우 포커스. 다크는 딥 그린블랙, 라이트는 프레시 화이트그린. (노랑 끝단 가독성 위해 버튼 텍스트는 다크)",
+    meta: [["강점","브랜드 정합·에너지"],["팔레트","#00A651·#8CC63F·#F2D200"],["Dark","딥 그린블랙+그라데이션"],["Light","프레시 화이트+그라데이션"]],
+  },
+  harvest: {
+    kicker: "DIRECTION 07 · 브랜드 팔레트 · 골드 강조 프리미엄",
+    name: "Harvest",
+    desc: "같은 팔레트에서 골드(#F2D200·#C8D400)를 주역으로, 그린(#39B54A)을 보조·텍스트로 쓰는 프리미엄·내추럴 방향. 세리프(Fraunces) 디스플레이 + 웜 뉴트럴 서피스로 '수확·일드 트레저리' 감성을 성숙하게. 다크는 딥 올리브블랙+골드, 라이트는 웜 아이보리+골드. Verdant보다 차분하고 고급스러운 톤.",
+    meta: [["강점","프리미엄·수확감"],["팔레트","#F2D200·#C8D400·#39B54A"],["Dark","올리브블랙+골드"],["Light","웜 아이보리+골드"]],
   },
 };
 
@@ -760,6 +868,8 @@ stage.addEventListener('click', e=>{
     }, 1300);
   }
 });
+// default: show brand-palette direction first
+selectDir('verdant');
 </script>
 </body>
 </html>
