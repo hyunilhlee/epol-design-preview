@@ -233,236 +233,50 @@
   .hint b { color: #c7cdd8; }
 
   /* ============================================================
-     DIRECTION 1 — AURORA MINT
+     DIRECTION 1 — FOUNDATION (재단 팔레트 · 플랫 솔리드 브랜드)
      ============================================================ */
-  .app[data-dir="aurora"][data-theme="dark"] {
+  .app[data-dir="foundation"][data-theme="dark"] {
     --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#0a0e15; --ink:#eef2f7; --mute:#7f899b; --accent-ink:#34d399; --accent-soft:rgba(52,211,153,.14); --on-accent:#04241b;
-    --bg-fx:radial-gradient(60% 50% at 12% 0%,rgba(52,211,153,.15),transparent 60%),radial-gradient(50% 45% at 100% 8%,rgba(34,211,238,.13),transparent 60%),radial-gradient(55% 55% at 85% 100%,rgba(167,139,250,.11),transparent 60%);
+    --bg:#0c130d; --ink:#e9f2ea; --mute:#82938a; --accent-ink:#39B54A; --accent-soft:rgba(57,181,74,.15); --on-accent:#ffffff;
+    --bg-fx:radial-gradient(55% 45% at 12% 0%,rgba(0,166,81,.13),transparent 60%),radial-gradient(45% 40% at 100% 100%,rgba(242,210,0,.08),transparent 60%);
     --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(255,255,255,.07);
-    --hover-bg:rgba(255,255,255,.06); --nav-on-ink:#eef2f7; --nav-on-bg:rgba(255,255,255,.08); --nav-on-shadow:none;
+    --hover-bg:rgba(57,181,74,.1); --nav-on-ink:#ffffff; --nav-on-bg:#00A651; --nav-on-shadow:0 4px 12px rgba(0,166,81,.35);
     --chip-bg:rgba(255,255,255,.05); --chip-border:1px solid rgba(255,255,255,.1);
-    --accent-grad:linear-gradient(120deg,#34d399,#22d3ee); --glow-sm:0 0 16px rgba(52,211,153,.5); --mark-radius:9px;
+    --accent-grad:#00A651; --glow-sm:0 4px 14px rgba(0,166,81,.4); --mark-radius:8px;
     --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:rgba(255,255,255,.045); --card-border:1px solid rgba(255,255,255,.09); --card-radius:18px; --card-shadow:0 8px 40px rgba(0,0,0,.3); --card-blur:blur(16px); --card-pad:20px;
-    --io-bg:rgba(255,255,255,.03); --io-border:1px solid rgba(255,255,255,.08); --io-radius:14px; --preview-bg:rgba(52,211,153,.05);
-    --tok-bg:rgba(255,255,255,.06); --tok-border:1px solid rgba(255,255,255,.1); --tok-radius:999px; --tok-ink:#eef2f7;
-    --arrow-bg:linear-gradient(120deg,#34d399,#22d3ee); --arrow-border:3px solid #0a0e15; --arrow-ink:#04241b; --arrow-radius:12px; --arrow-shadow:0 0 20px rgba(52,211,153,.4);
-    --focus-ring:0 0 0 3px rgba(52,211,153,.2);
-    --btn-radius:13px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 26px rgba(52,211,153,.28); --btn-primary-hover-shadow:0 10px 34px rgba(52,211,153,.42);
-    --sec-bg:rgba(255,255,255,.06); --sec-ink:#eef2f7; --sec-border:1px solid rgba(255,255,255,.12); --sec-shadow:none; --ghost-border:1px solid rgba(255,255,255,.14);
+    --card-bg:rgba(255,255,255,.04); --card-border:1px solid rgba(255,255,255,.08); --card-radius:14px; --card-shadow:0 8px 30px rgba(0,15,6,.35); --card-blur:blur(12px); --card-pad:20px;
+    --io-bg:rgba(255,255,255,.03); --io-border:1px solid rgba(255,255,255,.08); --io-radius:12px; --preview-bg:rgba(0,166,81,.05);
+    --tok-bg:rgba(255,255,255,.06); --tok-border:1px solid rgba(255,255,255,.1); --tok-radius:999px; --tok-ink:#e9f2ea;
+    --arrow-bg:#00A651; --arrow-border:3px solid #0c130d; --arrow-ink:#ffffff; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(0,166,81,.4);
+    --focus-ring:0 0 0 3px rgba(0,166,81,.25);
+    --btn-radius:12px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(0,166,81,.3); --btn-primary-hover-shadow:0 10px 30px rgba(0,166,81,.42);
+    --sec-bg:rgba(242,210,0,.14); --sec-ink:#e7cf3a; --sec-border:1px solid rgba(242,210,0,.4); --sec-shadow:none; --ghost-border:1px solid rgba(255,255,255,.14);
     --danger-bg:rgba(246,70,93,.12); --danger-ink:#ff8095; --danger-border:1px solid rgba(246,70,93,.35);
-    --seg-bg:rgba(255,255,255,.04); --seg-on-bg:rgba(255,255,255,.1); --seg-on-ink:#eef2f7; --seg-on-shadow:none;
-    --switch-off:rgba(255,255,255,.14); --switch-on:linear-gradient(120deg,#34d399,#22d3ee);
-    --tooltip-bg:#141a24; --tooltip-ink:#eef2f7; --divider:rgba(255,255,255,.08);
+    --seg-bg:rgba(255,255,255,.04); --seg-on-bg:#00A651; --seg-on-ink:#ffffff; --seg-on-shadow:0 2px 10px rgba(0,166,81,.3);
+    --switch-off:rgba(255,255,255,.14); --switch-on:#00A651;
+    --tooltip-bg:#12211a; --tooltip-ink:#e9f2ea; --divider:rgba(255,255,255,.08);
   }
-  .app[data-dir="aurora"][data-theme="light"] {
+  .app[data-dir="foundation"][data-theme="light"] {
     --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#eef3f2; --ink:#0c1b17; --mute:#677873; --accent-ink:#059669; --accent-soft:rgba(5,150,105,.1); --on-accent:#ffffff;
-    --bg-fx:radial-gradient(60% 50% at 12% 0%,rgba(16,185,129,.1),transparent 60%),radial-gradient(50% 45% at 100% 8%,rgba(6,182,212,.09),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.65); --hdr-border:1px solid #e0e8e6;
-    --hover-bg:rgba(5,150,105,.07); --nav-on-ink:#0c1b17; --nav-on-bg:#ffffff; --nav-on-shadow:0 2px 8px rgba(0,0,0,.06);
-    --chip-bg:#ffffff; --chip-border:1px solid #e0e8e6;
-    --accent-grad:linear-gradient(120deg,#10b981,#06b6d4); --glow-sm:0 4px 14px rgba(5,150,105,.35); --mark-radius:9px;
+    --bg:#f4faf2; --ink:#0e2016; --mute:#5f7a68; --accent-ink:#068a41; --accent-soft:rgba(0,166,81,.1); --on-accent:#ffffff;
+    --bg-fx:radial-gradient(55% 45% at 12% 0%,rgba(0,166,81,.09),transparent 60%),radial-gradient(45% 40% at 100% 100%,rgba(242,210,0,.08),transparent 60%);
+    --hdr-bg:rgba(255,255,255,.7); --hdr-border:1px solid #dcebd6;
+    --hover-bg:rgba(0,166,81,.07); --nav-on-ink:#ffffff; --nav-on-bg:#00A651; --nav-on-shadow:0 4px 12px rgba(0,166,81,.3);
+    --chip-bg:#ffffff; --chip-border:1px solid #dcebd6;
+    --accent-grad:#00A651; --glow-sm:0 4px 12px rgba(0,166,81,.3); --mark-radius:8px;
     --pill-radius:10px; --display-weight:700; --display-style:normal; --display-ls:-.02em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:#ffffff; --card-border:1px solid #e3ebe9; --card-radius:18px; --card-shadow:0 10px 30px rgba(16,90,70,.07); --card-blur:none; --card-pad:20px;
-    --io-bg:#f4f8f7; --io-border:1px solid #e3ebe9; --io-radius:14px; --preview-bg:rgba(5,150,105,.05);
-    --tok-bg:#ffffff; --tok-border:1px solid #dbe5e2; --tok-radius:999px; --tok-ink:#0c1b17;
-    --arrow-bg:linear-gradient(120deg,#10b981,#06b6d4); --arrow-border:3px solid #eef3f2; --arrow-ink:#ffffff; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(5,150,105,.3);
-    --focus-ring:0 0 0 3px rgba(5,150,105,.16);
-    --btn-radius:13px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(5,150,105,.24); --btn-primary-hover-shadow:0 10px 28px rgba(5,150,105,.36);
-    --sec-bg:#eef6f3; --sec-ink:#065f46; --sec-border:1px solid #cfe6dd; --sec-shadow:none; --ghost-border:1px solid #dbe5e2;
-    --danger-bg:rgba(185,28,28,.08); --danger-ink:#b91c1c; --danger-border:1px solid rgba(185,28,28,.3);
-    --seg-bg:#eef3f2; --seg-on-bg:#ffffff; --seg-on-ink:#0c1b17; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
-    --switch-off:#cdd8d5; --switch-on:linear-gradient(120deg,#10b981,#06b6d4);
-    --tooltip-bg:#0c1b17; --tooltip-ink:#ffffff; --divider:#e3ebe9;
-  }
-
-  /* ============================================================
-     DIRECTION 2 — EDITORIAL LUXE
-     ============================================================ */
-  .app[data-dir="luxe"][data-theme="light"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'Space Mono',monospace;
-    --bg:#f6f3ec; --ink:#191510; --mute:#8a8172; --accent-ink:#a6791f; --accent-soft:rgba(166,121,31,.1); --on-accent:#f8f4ea;
-    --bg-fx:radial-gradient(60% 40% at 100% 0%,rgba(166,121,31,.05),transparent 70%);
-    --hdr-bg:rgba(246,243,236,.72); --hdr-border:1px solid #e3dccc;
-    --hover-bg:rgba(0,0,0,.04); --nav-on-ink:#191510; --nav-on-bg:transparent; --nav-on-shadow:inset 0 -2px 0 #a6791f;
-    --chip-bg:#fffdf8; --chip-border:1px solid #e3dccc;
-    --accent-grad:#191510; --glow-sm:none; --mark-radius:3px;
-    --pill-radius:3px; --display-weight:900; --display-style:italic; --display-ls:-.02em; --card-title-weight:700; --card-title-style:italic; --gap:16px;
-    --card-bg:#fffdf8; --card-border:1px solid #e3dccc; --card-radius:4px; --card-shadow:none; --card-blur:none; --card-pad:22px;
-    --io-bg:#faf7f0; --io-border:1px solid #e3dccc; --io-radius:3px; --preview-bg:#f3eee2;
-    --tok-bg:#fff; --tok-border:1px solid #d8cfba; --tok-radius:3px; --tok-ink:#191510;
-    --arrow-bg:#191510; --arrow-border:3px solid #f6f3ec; --arrow-ink:#f6f3ec; --arrow-radius:3px; --arrow-shadow:none;
-    --focus-ring:0 0 0 2px rgba(25,21,16,.15);
-    --btn-radius:3px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:none; --btn-primary-hover-shadow:none;
-    --sec-bg:transparent; --sec-ink:#191510; --sec-border:1px solid #191510; --sec-shadow:none; --ghost-border:1px solid #d8cfba;
-    --danger-bg:transparent; --danger-ink:#a3341f; --danger-border:1px solid #a3341f;
-    --seg-bg:#f0ebde; --seg-on-bg:#191510; --seg-on-ink:#f6f3ec; --seg-on-shadow:none;
-    --switch-off:#d8cfba; --switch-on:#191510;
-    --tooltip-bg:#191510; --tooltip-ink:#f6f3ec; --divider:#e3dccc;
-  }
-  .app[data-dir="luxe"][data-theme="dark"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'Space Mono',monospace;
-    --bg:#16130d; --ink:#f2ebdb; --mute:#9a8f79; --accent-ink:#e0b25c; --accent-soft:rgba(224,178,92,.13); --on-accent:#16130d;
-    --bg-fx:radial-gradient(60% 45% at 100% 0%,rgba(224,178,92,.09),transparent 70%),radial-gradient(50% 40% at 0% 100%,rgba(224,178,92,.05),transparent 70%);
-    --hdr-bg:rgba(22,19,13,.72); --hdr-border:1px solid #342d20;
-    --hover-bg:rgba(255,255,255,.05); --nav-on-ink:#f2ebdb; --nav-on-bg:transparent; --nav-on-shadow:inset 0 -2px 0 #e0b25c;
-    --chip-bg:#1f1b13; --chip-border:1px solid #342d20;
-    --accent-grad:linear-gradient(120deg,#e6be6a,#c69a3c); --glow-sm:0 0 14px rgba(224,178,92,.35); --mark-radius:3px;
-    --pill-radius:3px; --display-weight:900; --display-style:italic; --display-ls:-.02em; --card-title-weight:700; --card-title-style:italic; --gap:16px;
-    --card-bg:#1e1a12; --card-border:1px solid #342d20; --card-radius:4px; --card-shadow:0 10px 30px rgba(0,0,0,.35); --card-blur:none; --card-pad:22px;
-    --io-bg:#241f16; --io-border:1px solid #342d20; --io-radius:3px; --preview-bg:#221d15;
-    --tok-bg:#241f16; --tok-border:1px solid #423824; --tok-radius:3px; --tok-ink:#f2ebdb;
-    --arrow-bg:linear-gradient(120deg,#e6be6a,#c69a3c); --arrow-border:3px solid #16130d; --arrow-ink:#16130d; --arrow-radius:3px; --arrow-shadow:0 0 16px rgba(224,178,92,.3);
-    --focus-ring:0 0 0 2px rgba(224,178,92,.25);
-    --btn-radius:3px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 6px 20px rgba(224,178,92,.2); --btn-primary-hover-shadow:0 8px 26px rgba(224,178,92,.32);
-    --sec-bg:transparent; --sec-ink:#f2ebdb; --sec-border:1px solid #f2ebdb; --sec-shadow:none; --ghost-border:1px solid #423824;
-    --danger-bg:transparent; --danger-ink:#e08a6f; --danger-border:1px solid #e08a6f;
-    --seg-bg:#241f16; --seg-on-bg:#e0b25c; --seg-on-ink:#16130d; --seg-on-shadow:none;
-    --switch-off:#423824; --switch-on:linear-gradient(120deg,#e6be6a,#c69a3c);
-    --tooltip-bg:#f2ebdb; --tooltip-ink:#16130d; --divider:#342d20;
-  }
-  .app[data-dir="luxe"] .aprbadge .n { color: var(--accent-ink); }
-
-  /* ============================================================
-     DIRECTION 3 — MONO GRID (Swiss / product-grade precision)
-     ============================================================ */
-  .app[data-dir="mono"][data-theme="dark"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Inter',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#0c0d10; --ink:#f2f3f5; --mute:#868b95; --accent-ink:#7c93ff; --accent-soft:rgba(124,147,255,.14); --on-accent:#ffffff;
-    --bg-fx:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px) 0 0/28px 28px;
-    --hdr-bg:rgba(22,23,27,.7); --hdr-border:1px solid #23252b;
-    --hover-bg:rgba(255,255,255,.05); --nav-on-ink:#f2f3f5; --nav-on-bg:#23252b; --nav-on-shadow:none;
-    --chip-bg:#191b20; --chip-border:1px solid #2a2c33;
-    --accent-grad:#6d8bff; --glow-sm:none; --mark-radius:6px;
-    --pill-radius:6px; --display-weight:800; --display-style:normal; --display-ls:-.03em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:#16171b; --card-border:1px solid #24262c; --card-radius:10px; --card-shadow:none; --card-blur:none; --card-pad:20px;
-    --io-bg:#101116; --io-border:1px solid #24262c; --io-radius:8px; --preview-bg:#101116;
-    --tok-bg:#1d1f25; --tok-border:1px solid #2c2f37; --tok-radius:7px; --tok-ink:#f2f3f5;
-    --arrow-bg:#6d8bff; --arrow-border:3px solid #0c0d10; --arrow-ink:#ffffff; --arrow-radius:8px; --arrow-shadow:none;
-    --focus-ring:0 0 0 3px rgba(109,139,255,.25);
-    --btn-radius:8px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:none; --btn-primary-hover-shadow:none;
-    --sec-bg:#1d1f25; --sec-ink:#f2f3f5; --sec-border:1px solid #2c2f37; --sec-shadow:none; --ghost-border:1px solid #2c2f37;
-    --danger-bg:rgba(239,68,68,.12); --danger-ink:#f87171; --danger-border:1px solid rgba(239,68,68,.35);
-    --seg-bg:#101116; --seg-on-bg:#24262c; --seg-on-ink:#f2f3f5; --seg-on-shadow:none;
-    --switch-off:#2c2f37; --switch-on:#6d8bff;
-    --tooltip-bg:#23252b; --tooltip-ink:#f2f3f5; --divider:#24262c;
-  }
-  .app[data-dir="mono"][data-theme="light"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Inter',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#f7f8fa; --ink:#0d0e12; --mute:#6b7280; --accent-ink:#2f5bea; --accent-soft:rgba(47,91,234,.1); --on-accent:#ffffff;
-    --bg-fx:linear-gradient(rgba(15,23,42,.03) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(15,23,42,.03) 1px,transparent 1px) 0 0/28px 28px;
-    --hdr-bg:rgba(255,255,255,.75); --hdr-border:1px solid #e7e8ec;
-    --hover-bg:rgba(15,23,42,.05); --nav-on-ink:#0d0e12; --nav-on-bg:#ffffff; --nav-on-shadow:0 1px 3px rgba(0,0,0,.08);
-    --chip-bg:#ffffff; --chip-border:1px solid #e4e6ea;
-    --accent-grad:#3563eb; --glow-sm:none; --mark-radius:6px;
-    --pill-radius:6px; --display-weight:800; --display-style:normal; --display-ls:-.03em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:#ffffff; --card-border:1px solid #e7e8ec; --card-radius:10px; --card-shadow:0 1px 2px rgba(16,24,40,.05); --card-blur:none; --card-pad:20px;
-    --io-bg:#f4f5f7; --io-border:1px solid #e7e8ec; --io-radius:8px; --preview-bg:#f4f5f7;
-    --tok-bg:#ffffff; --tok-border:1px solid #e0e2e8; --tok-radius:7px; --tok-ink:#0d0e12;
-    --arrow-bg:#3563eb; --arrow-border:3px solid #f7f8fa; --arrow-ink:#ffffff; --arrow-radius:8px; --arrow-shadow:0 2px 8px rgba(53,99,235,.25);
-    --focus-ring:0 0 0 3px rgba(47,91,234,.16);
-    --btn-radius:8px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 1px 2px rgba(16,24,40,.1); --btn-primary-hover-shadow:0 2px 6px rgba(53,99,235,.2);
-    --sec-bg:#f1f3f5; --sec-ink:#0d0e12; --sec-border:1px solid #e4e6ea; --sec-shadow:none; --ghost-border:1px solid #e0e2e8;
-    --danger-bg:rgba(220,38,38,.08); --danger-ink:#dc2626; --danger-border:1px solid rgba(220,38,38,.3);
-    --seg-bg:#eef0f3; --seg-on-bg:#ffffff; --seg-on-ink:#0d0e12; --seg-on-shadow:0 1px 3px rgba(0,0,0,.1);
-    --switch-off:#cfd3da; --switch-on:#3563eb;
-    --tooltip-bg:#0d0e12; --tooltip-ink:#ffffff; --divider:#e7e8ec;
-  }
-
-  /* ============================================================
-     DIRECTION 4 — ROYAL AMETHYST (jewel-tone premium treasury)
-     ============================================================ */
-  .app[data-dir="amethyst"][data-theme="dark"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#0e0a16; --ink:#ece7f5; --mute:#948ba8; --accent-ink:#c4a5ff; --accent-soft:rgba(167,139,250,.15); --on-accent:#17092b;
-    --bg-fx:radial-gradient(60% 50% at 15% 0%,rgba(167,139,250,.14),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(212,168,90,.1),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.02); --hdr-border:1px solid rgba(190,160,255,.12);
-    --hover-bg:rgba(190,160,255,.08); --nav-on-ink:#ece7f5; --nav-on-bg:rgba(190,160,255,.12); --nav-on-shadow:none;
-    --chip-bg:rgba(190,160,255,.06); --chip-border:1px solid rgba(190,160,255,.16);
-    --accent-grad:linear-gradient(120deg,#a78bfa,#c084fc); --glow-sm:0 0 16px rgba(167,139,250,.5); --mark-radius:8px;
-    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
-    --card-bg:rgba(255,255,255,.04); --card-border:1px solid rgba(190,160,255,.14); --card-radius:16px; --card-shadow:0 12px 40px rgba(20,8,40,.5); --card-blur:blur(14px); --card-pad:22px;
-    --io-bg:rgba(190,160,255,.04); --io-border:1px solid rgba(190,160,255,.14); --io-radius:12px; --preview-bg:rgba(212,168,90,.06);
-    --tok-bg:rgba(190,160,255,.08); --tok-border:1px solid rgba(190,160,255,.2); --tok-radius:999px; --tok-ink:#ece7f5;
-    --arrow-bg:linear-gradient(120deg,#a78bfa,#c084fc); --arrow-border:3px solid #0e0a16; --arrow-ink:#17092b; --arrow-radius:12px; --arrow-shadow:0 0 20px rgba(167,139,250,.45);
-    --focus-ring:0 0 0 3px rgba(167,139,250,.22);
-    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 26px rgba(167,139,250,.3); --btn-primary-hover-shadow:0 10px 34px rgba(167,139,250,.45);
-    --sec-bg:rgba(212,168,90,.14); --sec-ink:#e0bd77; --sec-border:1px solid rgba(212,168,90,.4); --sec-shadow:none; --ghost-border:1px solid rgba(190,160,255,.18);
-    --danger-bg:rgba(244,63,94,.12); --danger-ink:#fb7185; --danger-border:1px solid rgba(244,63,94,.35);
-    --seg-bg:rgba(190,160,255,.05); --seg-on-bg:rgba(190,160,255,.14); --seg-on-ink:#ece7f5; --seg-on-shadow:none;
-    --switch-off:rgba(190,160,255,.16); --switch-on:linear-gradient(120deg,#a78bfa,#c084fc);
-    --tooltip-bg:#1c1330; --tooltip-ink:#ece7f5; --divider:rgba(190,160,255,.12);
-  }
-  .app[data-dir="amethyst"][data-theme="light"] {
-    --font-body:'Inter','Noto Sans KR',sans-serif; --font-display:'Fraunces',serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#f6f2fb; --ink:#241833; --mute:#786a8c; --accent-ink:#7c3aed; --accent-soft:rgba(124,58,237,.1); --on-accent:#ffffff;
-    --bg-fx:radial-gradient(60% 45% at 12% 0%,rgba(139,92,246,.1),transparent 60%),radial-gradient(50% 45% at 100% 100%,rgba(180,140,60,.08),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.7); --hdr-border:1px solid #eae0f5;
-    --hover-bg:rgba(124,58,237,.07); --nav-on-ink:#ffffff; --nav-on-bg:#7c3aed; --nav-on-shadow:0 4px 12px rgba(124,58,237,.3);
-    --chip-bg:#ffffff; --chip-border:1px solid #eae0f5;
-    --accent-grad:linear-gradient(120deg,#8b5cf6,#a855f7); --glow-sm:0 4px 14px rgba(124,58,237,.35); --mark-radius:8px;
-    --pill-radius:999px; --display-weight:600; --display-style:normal; --display-ls:-.01em; --card-title-weight:600; --card-title-style:normal; --gap:16px;
-    --card-bg:#ffffff; --card-border:1px solid #eee6f8; --card-radius:16px; --card-shadow:0 10px 30px rgba(90,50,140,.08); --card-blur:none; --card-pad:22px;
-    --io-bg:#f8f4fc; --io-border:1px solid #eee6f8; --io-radius:12px; --preview-bg:rgba(180,140,60,.07);
-    --tok-bg:#ffffff; --tok-border:1px solid #e6dcf3; --tok-radius:999px; --tok-ink:#241833;
-    --arrow-bg:linear-gradient(120deg,#8b5cf6,#a855f7); --arrow-border:3px solid #f6f2fb; --arrow-ink:#ffffff; --arrow-radius:12px; --arrow-shadow:0 6px 16px rgba(124,58,237,.3);
-    --focus-ring:0 0 0 3px rgba(124,58,237,.16);
-    --btn-radius:999px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 22px rgba(124,58,237,.26); --btn-primary-hover-shadow:0 10px 28px rgba(124,58,237,.4);
-    --sec-bg:rgba(176,138,60,.12); --sec-ink:#8a6a1e; --sec-border:1px solid rgba(176,138,60,.4); --sec-shadow:none; --ghost-border:1px solid #e6dcf3;
+    --card-bg:#ffffff; --card-border:1px solid #e2eddb; --card-radius:14px; --card-shadow:0 8px 24px rgba(20,110,60,.07); --card-blur:none; --card-pad:20px;
+    --io-bg:#f3f8f0; --io-border:1px solid #e2eddb; --io-radius:12px; --preview-bg:rgba(0,166,81,.05);
+    --tok-bg:#ffffff; --tok-border:1px solid #d6e6cc; --tok-radius:999px; --tok-ink:#0e2016;
+    --arrow-bg:#00A651; --arrow-border:3px solid #f4faf2; --arrow-ink:#ffffff; --arrow-radius:12px; --arrow-shadow:0 6px 14px rgba(0,166,81,.3);
+    --focus-ring:0 0 0 3px rgba(0,166,81,.16);
+    --btn-radius:12px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 8px 20px rgba(0,166,81,.24); --btn-primary-hover-shadow:0 10px 26px rgba(0,166,81,.36);
+    --sec-bg:rgba(242,210,0,.2); --sec-ink:#8a6d0a; --sec-border:1px solid rgba(200,180,0,.5); --sec-shadow:none; --ghost-border:1px solid #d6e6cc;
     --danger-bg:rgba(190,24,60,.08); --danger-ink:#be123c; --danger-border:1px solid rgba(190,24,60,.3);
-    --seg-bg:#f1eafb; --seg-on-bg:#ffffff; --seg-on-ink:#241833; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
-    --switch-off:#d8cce8; --switch-on:linear-gradient(120deg,#8b5cf6,#a855f7);
-    --tooltip-bg:#241833; --tooltip-ink:#ffffff; --divider:#eee6f8;
+    --seg-bg:#eaf3e6; --seg-on-bg:#00A651; --seg-on-ink:#ffffff; --seg-on-shadow:0 2px 8px rgba(0,166,81,.3);
+    --switch-off:#cbddbc; --switch-on:#00A651;
+    --tooltip-bg:#0e2016; --tooltip-ink:#ffffff; --divider:#e2eddb;
   }
-  /* ============================================================
-     DIRECTION 5 — CYBER HUD
-     ============================================================ */
-  .app[data-dir="cyber"][data-theme="dark"] {
-    --font-body:'Space Grotesk','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#05070e; --ink:#d7ecff; --mute:#6a8299; --accent-ink:#22e1ff; --accent-soft:rgba(34,225,255,.12); --on-accent:#04121a;
-    --bg-fx:linear-gradient(rgba(34,225,255,.04) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(34,225,255,.04) 1px,transparent 1px) 0 0/34px 34px,radial-gradient(70% 60% at 50% -10%,rgba(34,225,255,.1),transparent 60%),radial-gradient(50% 50% at 100% 100%,rgba(255,61,190,.1),transparent 60%);
-    --hdr-bg:rgba(10,16,28,.6); --hdr-border:1px solid rgba(34,225,255,.2);
-    --hover-bg:rgba(34,225,255,.08); --nav-on-ink:#04121a; --nav-on-bg:#22e1ff; --nav-on-shadow:0 0 14px rgba(34,225,255,.6);
-    --chip-bg:rgba(34,225,255,.06); --chip-border:1px solid rgba(34,225,255,.25);
-    --accent-grad:linear-gradient(120deg,#22e1ff,#ff3dbe); --glow-sm:0 0 14px rgba(34,225,255,.6); --mark-radius:3px;
-    --pill-radius:4px; --display-weight:700; --display-style:normal; --display-ls:.01em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:rgba(14,22,38,.55); --card-border:1px solid rgba(34,225,255,.22); --card-radius:4px; --card-shadow:inset 0 0 30px rgba(34,225,255,.06),0 10px 40px rgba(0,0,0,.5); --card-blur:blur(10px); --card-pad:20px;
-    --io-bg:rgba(34,225,255,.04); --io-border:1px solid rgba(34,225,255,.2); --io-radius:3px; --preview-bg:rgba(34,225,255,.05);
-    --tok-bg:rgba(34,225,255,.08); --tok-border:1px solid rgba(34,225,255,.35); --tok-radius:4px; --tok-ink:#d7ecff;
-    --arrow-bg:linear-gradient(120deg,#22e1ff,#ff3dbe); --arrow-border:3px solid #05070e; --arrow-ink:#04121a; --arrow-radius:3px; --arrow-shadow:0 0 20px rgba(34,225,255,.6);
-    --focus-ring:0 0 0 2px rgba(34,225,255,.35),0 0 18px rgba(34,225,255,.3);
-    --btn-radius:4px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 0 24px rgba(34,225,255,.4); --btn-primary-hover-shadow:0 0 34px rgba(34,225,255,.6);
-    --sec-bg:transparent; --sec-ink:#22e1ff; --sec-border:1px solid rgba(34,225,255,.5); --sec-shadow:0 0 12px rgba(34,225,255,.15); --ghost-border:1px solid rgba(34,225,255,.3);
-    --danger-bg:rgba(255,61,110,.1); --danger-ink:#ff6b8e; --danger-border:1px solid rgba(255,61,110,.4);
-    --seg-bg:rgba(34,225,255,.05); --seg-on-bg:rgba(34,225,255,.15); --seg-on-ink:#22e1ff; --seg-on-shadow:0 0 12px rgba(34,225,255,.25);
-    --switch-off:rgba(34,225,255,.18); --switch-on:linear-gradient(120deg,#22e1ff,#ff3dbe);
-    --tooltip-bg:#0e1626; --tooltip-ink:#d7ecff; --divider:rgba(34,225,255,.15);
-  }
-  .app[data-dir="cyber"][data-theme="light"] {
-    --font-body:'Space Grotesk','Noto Sans KR',sans-serif; --font-display:'Space Grotesk',sans-serif; --font-mono:'JetBrains Mono',monospace;
-    --bg:#e9f1f6; --ink:#08222e; --mute:#5e7a88; --accent-ink:#0e8aa8; --accent-soft:rgba(14,138,168,.1); --on-accent:#ffffff;
-    --bg-fx:linear-gradient(rgba(14,138,168,.06) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(14,138,168,.06) 1px,transparent 1px) 0 0/34px 34px,radial-gradient(70% 60% at 50% -10%,rgba(14,138,168,.08),transparent 60%),radial-gradient(50% 50% at 100% 100%,rgba(219,39,119,.06),transparent 60%);
-    --hdr-bg:rgba(255,255,255,.68); --hdr-border:1px solid rgba(14,138,168,.22);
-    --hover-bg:rgba(14,138,168,.08); --nav-on-ink:#ffffff; --nav-on-bg:#0e8aa8; --nav-on-shadow:0 0 14px rgba(14,138,168,.4);
-    --chip-bg:rgba(255,255,255,.7); --chip-border:1px solid rgba(14,138,168,.25);
-    --accent-grad:linear-gradient(120deg,#06b6d4,#db2777); --glow-sm:0 0 12px rgba(14,138,168,.4); --mark-radius:3px;
-    --pill-radius:4px; --display-weight:700; --display-style:normal; --display-ls:.01em; --card-title-weight:700; --card-title-style:normal; --gap:14px;
-    --card-bg:rgba(255,255,255,.75); --card-border:1px solid rgba(14,138,168,.25); --card-radius:4px; --card-shadow:0 10px 30px rgba(14,90,110,.08); --card-blur:blur(10px); --card-pad:20px;
-    --io-bg:rgba(255,255,255,.6); --io-border:1px solid rgba(14,138,168,.22); --io-radius:3px; --preview-bg:rgba(14,138,168,.05);
-    --tok-bg:#ffffff; --tok-border:1px solid rgba(14,138,168,.3); --tok-radius:4px; --tok-ink:#08222e;
-    --arrow-bg:linear-gradient(120deg,#06b6d4,#db2777); --arrow-border:3px solid #e9f1f6; --arrow-ink:#ffffff; --arrow-radius:3px; --arrow-shadow:0 0 18px rgba(14,138,168,.4);
-    --focus-ring:0 0 0 2px rgba(14,138,168,.3),0 0 14px rgba(14,138,168,.2);
-    --btn-radius:4px; --btn-active:translateY(1px); --btn-primary-border:none; --btn-primary-shadow:0 6px 20px rgba(14,138,168,.28); --btn-primary-hover-shadow:0 8px 28px rgba(14,138,168,.4);
-    --sec-bg:transparent; --sec-ink:#0e8aa8; --sec-border:1px solid rgba(14,138,168,.5); --sec-shadow:none; --ghost-border:1px solid rgba(14,138,168,.28);
-    --danger-bg:rgba(190,24,60,.08); --danger-ink:#be123c; --danger-border:1px solid rgba(190,24,60,.35);
-    --seg-bg:rgba(14,138,168,.06); --seg-on-bg:#ffffff; --seg-on-ink:#0e8aa8; --seg-on-shadow:0 2px 6px rgba(0,0,0,.08);
-    --switch-off:#bcd2da; --switch-on:linear-gradient(120deg,#06b6d4,#db2777);
-    --tooltip-bg:#08222e; --tooltip-ink:#ffffff; --divider:rgba(14,138,168,.18);
-  }
-  .app[data-dir="cyber"] .card { clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px)); }
-  .app[data-dir="cyber"] .stat .v, .app[data-dir="cyber"] .aprbadge .n, .app[data-dir="cyber"] .pcard .big { text-shadow: 0 0 12px var(--accent-soft); }
 
   /* ============================================================
      DIRECTION 6 — VERDANT (brand palette · green→gold gradient)
@@ -563,22 +377,14 @@
   <div class="topbar-inner">
     <div class="brand"><b>EPOL</b><span>Design Directions</span></div>
       <div class="dir-tabs" id="tabs">
-        <button class="dir-tab active" data-t="aurora"><span class="dot" style="background:linear-gradient(120deg,#34d399,#22d3ee)"></span><span class="num">01</span>Aurora Mint</button>
-        <button class="dir-tab" data-t="luxe"><span class="dot" style="background:#a6791f"></span><span class="num">02</span>Editorial Luxe</button>
-        <button class="dir-tab" data-t="mono"><span class="dot" style="background:#6d8bff"></span><span class="num">03</span>Mono Grid</button>
-        <button class="dir-tab" data-t="amethyst"><span class="dot" style="background:linear-gradient(120deg,#a78bfa,#c084fc)"></span><span class="num">04</span>Royal Amethyst</button>
-        <button class="dir-tab" data-t="cyber"><span class="dot" style="background:linear-gradient(120deg,#22e1ff,#ff3dbe)"></span><span class="num">05</span>Cyber HUD</button>
-        <button class="dir-tab" data-t="verdant"><span class="dot" style="background:linear-gradient(120deg,#00A651,#8CC63F,#F2D200)"></span><span class="num">06</span>Verdant</button>
-        <button class="dir-tab" data-t="harvest"><span class="dot" style="background:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F)"></span><span class="num">07</span>Harvest</button>
+        <button class="dir-tab active" data-t="foundation"><span class="dot" style="background:#00A651"></span><span class="num">01</span>Foundation</button>
+        <button class="dir-tab" data-t="verdant"><span class="dot" style="background:linear-gradient(120deg,#00A651,#8CC63F,#F2D200)"></span><span class="num">02</span>Verdant</button>
+        <button class="dir-tab" data-t="harvest"><span class="dot" style="background:linear-gradient(120deg,#F2D200,#C8D400,#8CC63F)"></span><span class="num">03</span>Harvest</button>
       </div>
       <select class="dir-select" id="dirSelect" aria-label="시안 선택">
-        <option value="aurora">01 · Aurora Mint</option>
-        <option value="luxe">02 · Editorial Luxe</option>
-        <option value="mono">03 · Mono Grid</option>
-        <option value="amethyst">04 · Royal Amethyst</option>
-        <option value="cyber">05 · Cyber HUD</option>
-        <option value="verdant">06 · Verdant (그린→골드)</option>
-        <option value="harvest">07 · Harvest (골드 강조)</option>
+        <option value="foundation">01 · Foundation (재단 기준)</option>
+        <option value="verdant">02 · Verdant (그린→골드)</option>
+        <option value="harvest">03 · Harvest (골드 강조)</option>
       </select>
       <div class="theme-toggle" id="themeToggle">
         <button data-th="dark" class="on">🌙 Dark</button>
@@ -591,44 +397,20 @@
 
 <script>
 const DIRS = {
-  aurora: {
-    kicker: "DIRECTION 01 · 리스크 낮음 · 현재 브랜드 진화",
-    name: "Aurora Mint",
-    desc: "지금의 민트그린 DNA를 유지하면서 '글래스모피즘 2.0'로 깊이를 더한 방향. 반투명 유리 패널 + 민트→시안 그라데이션 + 글로우 포커스. 라이트 모드에선 화이트 카드에 에메랄드 액센트로 깔끔하게 전환. 기존 --accent 토큰 구조를 그대로 진화시켜 교체 부담이 가장 적음.",
-    meta: [["강점","브랜드 연속성"],["레퍼런스","Uniswap·Phantom"],["Dark","네이비 글래스+글로우"],["Light","화이트+에메랄드"]],
-  },
-  luxe: {
-    kicker: "DIRECTION 02 · 신뢰 우선 · 프리미엄 핀테크",
-    name: "Editorial Luxe",
-    desc: "세리프(Fraunces) 에디토리얼 감성 극대화. 큼직한 이탤릭 디스플레이 + 단일 골드 액센트 + 얇은 헤어라인. 라이트는 크림 페이퍼(프라이빗 뱅크), 다크는 에스프레소+골드(가죽 장정 매거진) 무드. DeFi의 '금융·신뢰' 측면을 강조하는 방향.",
-    meta: [["강점","신뢰·고급감"],["레퍼런스","Stripe·매거진"],["Light","크림 페이퍼+블랙"],["Dark","에스프레소+골드"]],
-  },
-  mono: {
-    kicker: "DIRECTION 03 · 프로덕트 정밀 · Swiss/Linear 계열",
-    name: "Mono Grid",
-    desc: "니어-모노크롬 그래파이트 + 단일 일렉트릭 블루 액센트. 타이트한 그로테스크 타이포, 정렬된 tabular 숫자, 얇은 보더와 작은 라운드, 잔잔한 그리드. 화려함을 걷어내고 '데이터·정밀·프로덕트' 감각을 극대화한 방향. Linear·Vercel·Framer 같은 SaaS 프로 그레이드 무드. 프로 트레이더와 대시보드형 화면에 특히 강함.",
-    meta: [["강점","정밀·중립·확장성"],["레퍼런스","Linear·Vercel·Hyperliquid"],["Dark","그래파이트+블루"],["Light","화이트 그리드+블루"]],
-  },
-  amethyst: {
-    kicker: "DIRECTION 04 · 프리미엄 · 주얼톤 트레저리",
-    name: "Royal Amethyst",
-    desc: "딥 플럼/바이올렛 + 샴페인 골드의 주얼톤 럭셔리. 기존 👑 골드-킹/볼트 게임 요소를 '왕실 트레저리'로 성숙하게 승화. 다크는 옵시디언 바이올렛 글래스 + 어메시스트 글로우, 라이트는 라벤더-아이보리 + 딥 바이올렛. 세컨더리 액션에 골드 메탈릭을 써서 고급감을 살림. Luxe(웜 크림 세리프)와는 확실히 다른 '쿨 주얼' 계열.",
-    meta: [["강점","프리미엄·왕실감"],["레퍼런스","Kraken·주얼 럭셔리"],["Dark","옵시디언 바이올렛+골드"],["Light","라벤더 아이보리+골드"]],
-  },
-  cyber: {
-    kicker: "DIRECTION 05 · 미래지향 · 트레이더 콕핏",
-    name: "Cyber HUD",
-    desc: "그리드 배경 + 홀로그래픽 액센트 + HUD 클립코너 패널 + 글로우 수치. 모노스페이스 데이터로 프로 트레이더 '콕핏' 감성. 다크는 딥스페이스 네온, 라이트는 아이스 블루프린트(엔지니어링 화이트) — 라이트에서도 클립코너·그리드·시안 액센트로 테크 감성을 유지. 데이터 밀도 높은 화면에 강함.",
-    meta: [["강점","테크·데이터감"],["레퍼런스","Hyperliquid·SF HUD"],["Dark","딥스페이스 네온"],["Light","아이스 블루프린트"]],
+  foundation: {
+    kicker: "DIRECTION 01 · 재단 팔레트 기준 · 플랫 솔리드 브랜드",
+    name: "Foundation",
+    desc: "재단에서 제공한 컬러(#00A651 · #39B54A · #8CC63F · #C8D400 · #F2D200)를 그라데이션 없이 '있는 그대로' 플랫 솔리드로 쓰는 가장 정직한 브랜드 방향. 딥 그린(#00A651)을 주요 CTA·네비·스위치에, 골드(#F2D200)를 세컨더리·리워드 강조에, 라임/옐로우그린을 보조로. 깔끔하고 신뢰감 있는 공식 브랜드 톤. 다크는 그린 뉴트럴 블랙, 라이트는 클린 화이트그린.",
+    meta: [["강점","재단 브랜드 정합"],["팔레트","#00A651·#F2D200 (솔리드)"],["Dark","그린 뉴트럴 블랙"],["Light","클린 화이트+그린"]],
   },
   verdant: {
-    kicker: "DIRECTION 06 · 브랜드 팔레트 · 그린→골드 그라데이션",
+    kicker: "DIRECTION 02 · 브랜드 팔레트 · 그린→골드 그라데이션",
     name: "Verdant",
     desc: "제시한 브랜드 컬러(진한그린 #00A651 → 라임 #8CC63F → 골드 #F2D200)를 히어로 그라데이션으로 전면에 쓰는 비비드·모던 방향. 성장/수확/일드 느낌의 에너제틱한 그린-골드. CTA·스왑화살표·아이콘·스위치에 브랜드 그라데이션, 글로우 포커스. 다크는 딥 그린블랙, 라이트는 프레시 화이트그린. (노랑 끝단 가독성 위해 버튼 텍스트는 다크)",
     meta: [["강점","브랜드 정합·에너지"],["팔레트","#00A651·#8CC63F·#F2D200"],["Dark","딥 그린블랙+그라데이션"],["Light","프레시 화이트+그라데이션"]],
   },
   harvest: {
-    kicker: "DIRECTION 07 · 브랜드 팔레트 · 골드 강조 프리미엄",
+    kicker: "DIRECTION 03 · 브랜드 팔레트 · 골드 강조 프리미엄",
     name: "Harvest",
     desc: "같은 팔레트에서 골드(#F2D200·#C8D400)를 주역으로, 그린(#39B54A)을 보조·텍스트로 쓰는 프리미엄·내추럴 방향. 세리프(Fraunces) 디스플레이 + 웜 뉴트럴 서피스로 '수확·일드 트레저리' 감성을 성숙하게. 다크는 딥 올리브블랙+골드, 라이트는 웜 아이보리+골드. Verdant보다 차분하고 고급스러운 톤.",
     meta: [["강점","프리미엄·수확감"],["팔레트","#F2D200·#C8D400·#39B54A"],["Dark","올리브블랙+골드"],["Light","웜 아이보리+골드"]],
@@ -869,7 +651,7 @@ stage.addEventListener('click', e=>{
   }
 });
 // default: show brand-palette direction first
-selectDir('verdant');
+selectDir('foundation');
 </script>
 </body>
 </html>
